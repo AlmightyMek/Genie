@@ -16,7 +16,7 @@ def main():
     startTime = datetime.now()
 
     tb = get_testbed()
-    task = GenieClient(tb).update_interface_desc()
+    task = GenieClient(tb,log=True).update_interface_desc()
 
     #pprint.pprint(config_dict)
 
