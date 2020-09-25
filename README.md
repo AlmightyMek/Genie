@@ -1,3 +1,3 @@
 # Genie
 
-Scripts that use Genie package
+Scripts that use the Genie package from PyATS
