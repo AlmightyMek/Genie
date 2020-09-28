@@ -1,7 +1,6 @@
 from genie import abstract
 from genie.conf.base import device
 from genie.libs.conf.interface import Interface
-from pyats.async_ import pcall
 import pyats
 import pprint
 
