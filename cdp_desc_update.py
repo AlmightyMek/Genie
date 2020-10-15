@@ -1,6 +1,6 @@
 from genie import abstract
 from genie.testbed import load
-Adfrom genie.libs.conf.interface import Interface
+from genie.libs.conf.interface import Interface
 from genie_modules import GenieClient
 from pyats.async_ import pcall
 from datetime import datetime
@@ -21,7 +21,8 @@ def get_testbed(testbed):
 
 
 def update_interface_desc(device):
-    """Updates device interface desc with the cdp information from the get_cdp function
+    """Updates device interface desc with the cdp information 
+    from the get_cdp function in the GenieClient
     """
 
     print(f'Running commands on {device}...')
