@@ -8,7 +8,6 @@ import pprint
 import sys
 import click 
 
-
 def get_testbed(testbed):
     try:
         load_tb = load(testbed.strip())
@@ -18,7 +17,6 @@ def get_testbed(testbed):
         e = sys.exc_info()[1]
         print(e)
         sys.exit(1)   
-
 
 def update_interface_desc(device):
     """Updates device interface desc with the cdp information 
@@ -30,7 +28,6 @@ def update_interface_desc(device):
     
     management_interface = ['GigabitEthernet0/0','MgmtEth0/RP0/CPU0/0','GigabitEthernet0','mgmt0']
 
- 
     for index in cdp_dict["index"]: # For each cdp entry in the cdp_dict
         local_interface = cdp_dict["index"][index]["local_interface"]
         remote_device_hostname = cdp_dict["index"][index]["device_id"]
@@ -62,7 +59,7 @@ def main(testbed,log):
     pcall_task = pcall(update_interface_desc, device=devices.values())
     total_time = (datetime.now() - startTime)
    
-    print('Script took {} to complete'.format(total_time))
+    print('Script took {} to update the device\'s interfaces'.format(total_time))
 
 if __name__ == "__main__": 
     main()
